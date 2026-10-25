@@ -29,11 +29,34 @@ public class OrderHeader {
     @Embedded
     private ShippingAddress shippingAddress;
 
-    protected OrderHeader(Long id, LocalDateTime orderDate, LocalDate requestedDeliveryDate, OrderStatus status, ShippingAddress shippingAddress) {
+    public OrderHeader(Long id, LocalDateTime orderDate, LocalDate requestedDeliveryDate, OrderStatus status, ShippingAddress shippingAddress) {
         this.id = id;
         this.orderDate = orderDate;
         this.requestedDeliveryDate = requestedDeliveryDate;
         this.status = status;
         this.shippingAddress = shippingAddress;
+    }
+
+    protected OrderHeader() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public LocalDate getRequestedDeliveryDate() {
+        return requestedDeliveryDate;
+    }
+
+    public OrderStatus getStatus() {
+        return status;
+    }
+
+    public ShippingAddress getShippingAddress() {
+        return shippingAddress;
     }
 }

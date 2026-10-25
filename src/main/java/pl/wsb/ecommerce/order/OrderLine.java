@@ -32,11 +32,34 @@ public class OrderLine {
     @Column(name = "comment", length = 255)
     private String comment;
 
-    protected OrderLine(Long id, int quantity, BigDecimal price, int discountPct, String comment) {
+    public OrderLine(Long id, int quantity, BigDecimal price, int discountPct, String comment) {
         this.id = id;
         this.quantity = quantity;
         this.price = price;
         this.discountPct = discountPct;
         this.comment = comment;
+    }
+
+    protected OrderLine() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public int getDiscountPct() {
+        return discountPct;
+    }
+
+    public String getComment() {
+        return comment;
     }
 }
