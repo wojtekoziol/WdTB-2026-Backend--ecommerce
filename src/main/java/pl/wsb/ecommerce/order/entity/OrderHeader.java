@@ -1,9 +1,8 @@
-package pl.wsb.ecommerce.order;
+package pl.wsb.ecommerce.order.entity;
 
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "order_header")

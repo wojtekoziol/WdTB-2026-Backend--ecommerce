@@ -1,4 +1,4 @@
-package pl.wsb.ecommerce.order;
+package pl.wsb.ecommerce.order.entity;
 
 public enum OrderStatus {
     PENDING,
