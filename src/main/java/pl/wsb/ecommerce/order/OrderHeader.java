@@ -17,7 +17,7 @@ public class OrderHeader {
     // private clientId;
 
     @Column(name = "order_date", nullable = false)
-    private LocalDateTime orderDate;
+    private LocalDate orderDate;
 
     @Column(name = "requested_delivery_date")
     private LocalDate requestedDeliveryDate;
@@ -29,7 +29,7 @@ public class OrderHeader {
     @Embedded
     private ShippingAddress shippingAddress;
 
-    public OrderHeader(Long id, LocalDateTime orderDate, LocalDate requestedDeliveryDate, OrderStatus status, ShippingAddress shippingAddress) {
+    public OrderHeader(Long id, LocalDate orderDate, LocalDate requestedDeliveryDate, OrderStatus status, ShippingAddress shippingAddress) {
         this.id = id;
         this.orderDate = orderDate;
         this.requestedDeliveryDate = requestedDeliveryDate;
@@ -44,7 +44,7 @@ public class OrderHeader {
         return id;
     }
 
-    public LocalDateTime getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
