@@ -29,6 +29,11 @@ public class OrderHeader {
     @Embedded
     private ShippingAddress shippingAddress;
 
-    protected OrderHeader() {
+    protected OrderHeader(Long id, LocalDateTime orderDate, LocalDate requestedDeliveryDate, OrderStatus status, ShippingAddress shippingAddress) {
+        this.id = id;
+        this.orderDate = orderDate;
+        this.requestedDeliveryDate = requestedDeliveryDate;
+        this.status = status;
+        this.shippingAddress = shippingAddress;
     }
 }

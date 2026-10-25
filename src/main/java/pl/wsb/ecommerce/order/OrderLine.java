@@ -31,4 +31,12 @@ public class OrderLine {
 
     @Column(name = "comment", length = 255)
     private String comment;
+
+    protected OrderLine(Long id, int quantity, BigDecimal price, int discountPct, String comment) {
+        this.id = id;
+        this.quantity = quantity;
+        this.price = price;
+        this.discountPct = discountPct;
+        this.comment = comment;
+    }
 }
